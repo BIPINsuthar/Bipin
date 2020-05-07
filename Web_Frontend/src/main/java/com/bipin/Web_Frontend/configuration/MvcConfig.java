@@ -23,11 +23,15 @@ public class MvcConfig extends WebMvcConfigurerAdapter
     	  iv.setSuffix(".jsp");
     	  return iv;
       }
-	  
-       @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-    	
-    	   registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/assest/");
-       }
+	   
+	  @Override
+	  public void addResourceHandlers(ResourceHandlerRegistry registry) 
+	    {
+		  registry.addResourceHandler("/resources/**").addResourceLocations("classpath:/assest/");
+       
+
+	    }
+	 
+	 
       
 }

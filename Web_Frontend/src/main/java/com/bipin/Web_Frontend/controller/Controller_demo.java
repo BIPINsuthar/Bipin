@@ -10,8 +10,18 @@ public class Controller_demo
 	public String demo()
 	{
 		
-		return "demo";
+		return "master";
 		
 	}
-
+	
+	@RequestMapping("/login")
+	public String login()
+	{
+		return "login";
+	}
+	@RequestMapping("/registration")
+    public String registration()
+    {
+		return "registration";
+    }
 }

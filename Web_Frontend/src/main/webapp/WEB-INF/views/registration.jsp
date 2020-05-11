@@ -31,10 +31,10 @@
 				<a href="login"><button class="btn btn-success">Login</button></a>
 			</div>
 
-			<div class="col-md-8 ml-auto right mt-5 px-5">
+			<div class="col-md-8 ml-auto right  px-5">
 			
 <!-- form  -->
-				<form action="registration-form" method="post" >
+				<form action="registrationform" method="post" >
 					<div class="row py-4 mt-5">
 						<div class="form-group col-md-5  ">
 							<input  class="form-control" id="fname"
@@ -54,7 +54,7 @@
 						
 						<div class="form-group col-md-5">
 							<input type="password" class="form-control" id="cpass"
-								placeholder="Confirm password"name="cpass" >
+	z							placeholder="Confirm password"name="cpass" >
 						</div>
 
 						<div class="form-group col-md-5">

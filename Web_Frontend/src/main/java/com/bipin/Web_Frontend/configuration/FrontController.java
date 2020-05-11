@@ -1,8 +1,9 @@
 package com.bipin.Web_Frontend.configuration;
 
+import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-
+@Configuration
 public class FrontController extends AbstractAnnotationConfigDispatcherServletInitializer
 {
 

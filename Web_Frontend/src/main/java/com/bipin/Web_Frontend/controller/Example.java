@@ -6,11 +6,28 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class Example 
 {
-	@RequestMapping("\registration")
-	public String Registration()
+	
+	@RequestMapping("/")
+	public String start()
 	{
-		return "registration";
+		return "index.jsp";
+	}
+	@RequestMapping("/demo")
+	public String demo()
+	{
+		return "master";
 		
 	}
+	
+	@RequestMapping("/login")
+	public String login()
+	{
+		return "login";
+	}
+	
+	
+	
+	
+	
 	
 }

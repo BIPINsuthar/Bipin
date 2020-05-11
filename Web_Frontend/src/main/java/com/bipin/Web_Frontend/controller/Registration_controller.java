@@ -6,30 +6,24 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bipin.Web_Frontend.dao.RegDao;
+import com.bipin.Web_Frontend.dto.*;
+import com.bipin.Web_Frontend.dao.*;
+
 
 @Controller
 public class Registration_controller 
 {
-
-	@RequestMapping("/demo")
-	public String demo()
-	{
-		
-		return "master";
-		
-	}
 	
-	@RequestMapping("/login")
-	public String login()
-	{
-		return "login";
-	}
+	@RequestMapping("/registration")
+    public String value()
+    {
+		return "registration";
+    }
 	
-	
-	
+	@RequestMapping("registrationform")
 	public String Registrationform(HttpServletRequest req,HttpServletResponse res)
 	{
+		
 		String fname=req.getParameter("fname");
 		String lname=req.getParameter("lname");
 		String pass=req.getParameter("pass");
@@ -41,10 +35,12 @@ public class Registration_controller
 		String address=req.getParameter("address");
 		//String type=req.getParameter("type");
 		
+		Registration r=new Registration(fname,lname,pass,phone,email,date,gender,address);
 		RegDao rd=new RegDao();
-	    rd.setregValue(fname, lname, pass, phone, email, date, gender, address);
+		rd.setregValue(r);
+	   
+		return "login";
 		
-		return "registration";
 	}
 
 }

@@ -12,7 +12,7 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 @SuppressWarnings("deprecation")
 @Configuration
 @EnableWebMvc
-@ComponentScan("com.bipin.Web_Frontend.controller")
+@ComponentScan({"com.bipin.Web_Frontend.controller"})
 public class MvcConfig extends WebMvcConfigurerAdapter
 {
 	  @Bean

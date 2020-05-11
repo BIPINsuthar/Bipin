@@ -1,5 +1,7 @@
 package com.bipin.Web_Frontend.dto;
 
+import java.sql.Timestamp;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -22,6 +24,25 @@ public class Registration
 	private String date;
 	private String gender;
 	private String address;
+	private Timestamp time;
+	
+	
+	public Registration()
+	{
+		
+	}
+	public Registration(String fname, String lname, String pass, String phone, String email, String date, String gender,
+			String address) {
+		super();
+		this.fname = fname;
+		this.lname = lname;
+		this.pass = pass;
+		this.phone = phone;
+		this.email = email;
+		this.date = date;
+		this.gender = gender;
+		this.address = address;
+	}
 	public int getId() {
 		return id;
 	}
@@ -83,6 +104,13 @@ public class Registration
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
+	public Timestamp getTime() {
+		return time;
+	}
+	public void setTime(Timestamp time) {
+		this.time = time;
+	}
+	
 	
 	
 	

@@ -26,7 +26,7 @@
       <p>UserName: </p>
       <input type="text"  placeholder="enter user id!" id="user" />
       <p>Password:</p>
-      <input type="password"  placeholder="enter the password!" id="pass" /></br>
+      <input type="password"  placeholder="enter the password!" id="pass" />
       <input type="submit" name="btn" value="sing in"/>
       <a href="#">Forgot Password</a>
       <div class="registration">

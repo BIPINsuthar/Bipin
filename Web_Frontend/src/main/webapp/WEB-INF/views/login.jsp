@@ -18,15 +18,15 @@
   <header>
   <%@include file="./shared/header.jsp" %>
   </header>
+   
   <div class="loginbox">
     <form action="loginpage" onsubmit=" return validate()">
       <image src="${image}/man.png" class="user"></image>
       <center> <h1>login here</h1></center>
-     
       <p>UserName: </p>
-      <input type="text"  placeholder="enter user id!" id="user" />
+      <input type="text"  placeholder="enter user id!" id="user" name="user"/>
       <p>Password:</p>
-      <input type="password"  placeholder="enter the password!" id="pass" />
+      <input type="password"  placeholder="enter the password!" id="pass" name="pass" />
       <input type="submit" name="btn" value="sing in"/>
       <a href="#">Forgot Password</a>
       <div class="registration">
@@ -35,7 +35,7 @@
      
 
     </form>
-
+    <%@ include file="./shared/message.jsp" %>
   </div>
 </body>
 

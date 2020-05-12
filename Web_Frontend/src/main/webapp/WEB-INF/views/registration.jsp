@@ -14,6 +14,9 @@
 <link href="${css}/registration.css" rel="stylesheet">
 <script src="${css}/bootstrap.js" type="text/javascript"></script>
 <script src="${js}/registration.js" type="text/javascript"></script>
+<script>
+$('.alert').alert()
+</script>
 </head>
 <body>
 <!-- header file -->
@@ -23,7 +26,7 @@
 	<section>
 	<div class="container">
 		<div class="row mt-5">
-			<div class="left col-md-4 mt-5 text-center text-uppercase">
+			<div class="left col-md-4 mt-2 text-center text-uppercase">
 				<img class="img-fluid"
 					src="https://image.ibb.co/n7oTvU/logo_white.png" alt="" />
 				<h1>Join Us</h1>
@@ -33,9 +36,11 @@
 
 			<div class="col-md-8 ml-auto right  px-5">
 			
+			<%@ include file="./shared/message.jsp" %>
+			
 <!-- form  -->
 				<form action="registrationform" method="post" >
-					<div class="row py-4 mt-5">
+					<div class="row  ">
 						<div class="form-group col-md-5  ">
 							<input  class="form-control" id="fname"
 								placeholder="First Name" name="fname">
@@ -88,7 +93,7 @@
 								rows="2" placeholder="Address" name="address"></textarea>
 						</div>
 						<div class="form-group col-md-5">
-							<button class="submit btn btn-primary " onclick="validation()">submit</button>
+							<button class="submit btn btn-primary " onclick="return validation()">submit</button>
 						</div>
 
 					</div>

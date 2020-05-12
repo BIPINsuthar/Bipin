@@ -14,6 +14,7 @@
 			<version>3.8.1</version>
 			<scope>test</scope>
 		</dependency>
+		<!-- spring mvc -->
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
@@ -24,22 +25,39 @@
 			<artifactId>spring-webmvc</artifactId>
 			<version>5.2.4.RELEASE</version>
 		</dependency>
+
+		<!-- jstl -->
 		<dependency>
 			<groupId>jstl</groupId>
 			<artifactId>jstl</artifactId>
 			<version>1.2</version>
 		</dependency>
+
+		<!-- hibernate -->
 		<dependency>
 			<groupId>org.hibernate</groupId>
 			<artifactId>hibernate-core</artifactId>
 			<version>5.4.13.Final</version>
 		</dependency>
+
+
+
+		<!-- mssqlserver driver -->
 		<dependency>
 			<groupId>com.microsoft.sqlserver</groupId>
 			<artifactId>mssql-jdbc</artifactId>
 			<version>8.2.0.jre8</version>
 		</dependency>
+
+		<!-- for second level cache -->
+
+
+
+
+
+
 	</dependencies>
+
 	<build>
 		<finalName>Web_Frontend</finalName>
 	</build>

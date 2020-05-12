@@ -11,21 +11,25 @@ function validation() {
         var regx = /^[6-9]\d{9}$/;
         var regx1 = /^([a-zA-Z0-9\.-]+)@([a-zA-Z0-9-]+).([a-z]{2,8})(.[a-z]{2,8})?$/
         if (fname.trim() == "") {
-            alert("blank value not allowed!");
+            alert("blank value not allowed!:first name ");
             return false;
         }
         if (lname.trim() == "") {
-            alert("blank value not allowed!");
+            alert(" blank value not allowed!:last name");
             return false;
         }
         if (pass.trim() == "" || cpass.trim() == "") {
-            alert("pass and cpass");
+            alert("blank value not allowed!:password");
             return false;
         }
         if (pass.trim() != cpass.trim()) {
             alert("password shoult be same!");
             return false;
         }
+        if(pass.trim().length<8)
+        	{
+        	  alert("password must be 8 character!");
+        	}
         if (!regx.test(phone.trim())) {
             alert("phone value not valid!");
             return false;
@@ -35,11 +39,11 @@ function validation() {
             return false;
         }
         if (dob.trim() == "") {
-            alert("dob");
+            alert("blank value not allowed!:DOB");
             return false;
         }
         if (address.trim() == "") {
-            alert("address");
+            alert("blnak vlaue not allowed!:address");
             return false;
         }
         else {

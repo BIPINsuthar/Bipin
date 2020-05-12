@@ -2,12 +2,13 @@ package com.bipin.Web_Frontend.controller;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.bipin.Web_Frontend.dto.*;
-import com.bipin.Web_Frontend.dao.*;
+import com.bipin.Web_Frontend.dao.RegDao;
+import com.bipin.Web_Frontend.dto.User;
 
 
 @Controller
@@ -35,11 +36,14 @@ public class Registration_controller
 		String address=req.getParameter("address");
 		//String type=req.getParameter("type");
 		
-		Registration r=new Registration(fname,lname,pass,phone,email,date,gender,address);
+		User r=new User(fname,lname,pass,phone,email,date,gender,address,"normal");
 		RegDao rd=new RegDao();
-		rd.setregValue(r);
-	   
-		return "login";
+		int id=rd.setregValue(r);
+	    
+		HttpSession h=req.getSession();
+		h.setAttribute("message","Registration succesffully done! your ID="+id);
+		
+		return "registration";
 		
 	}
 

@@ -1,15 +1,13 @@
 package com.bipin.Web_Frontend.dto;
 
-import java.sql.Timestamp;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.Transient;
 
-@Entity
-public class Registration
+@Entity(name="User_Detail")
+
+public class User 
 {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
@@ -17,22 +15,21 @@ public class Registration
 	private String fname;
 	private String lname;
 	private String pass;
-	@Transient
-	private String cpass;
 	private String phone;
 	private String email;
 	private String date;
 	private String gender;
 	private String address;
-	private Timestamp time;
+	private String type;
 	
-	
-	public Registration()
+    
+	public User()
 	{
 		
 	}
-	public Registration(String fname, String lname, String pass, String phone, String email, String date, String gender,
-			String address) {
+	
+	public User(String fname, String lname, String pass, String phone, String email, String date, String gender,
+			String address, String type) {
 		super();
 		this.fname = fname;
 		this.lname = lname;
@@ -42,7 +39,10 @@ public class Registration
 		this.date = date;
 		this.gender = gender;
 		this.address = address;
+		this.type = type;
 	}
+	
+	
 	public int getId() {
 		return id;
 	}
@@ -67,11 +67,11 @@ public class Registration
 	public void setPass(String pass) {
 		this.pass = pass;
 	}
-	public String getCpass() {
-		return cpass;
+	public String getPhone() {
+		return phone;
 	}
-	public void setCpass(String cpass) {
-		this.cpass = cpass;
+	public void setPhone(String phone) {
+		this.phone = phone;
 	}
 	public String getEmail() {
 		return email;
@@ -79,7 +79,6 @@ public class Registration
 	public void setEmail(String email) {
 		this.email = email;
 	}
-	
 	public String getDate() {
 		return date;
 	}
@@ -98,22 +97,20 @@ public class Registration
 	public void setAddress(String address) {
 		this.address = address;
 	}
-	public String getPhone() {
-		return phone;
+	public String getType() {
+		return type;
 	}
-	public void setPhone(String phone) {
-		this.phone = phone;
+	public void setType(String type) {
+		this.type = type;
 	}
-	public Timestamp getTime() {
-		return time;
-	}
-	public void setTime(Timestamp time) {
-		this.time = time;
-	}
-	
-	
-	
-	
-	
 
+	@Override
+	public String toString() {
+		return "User [id=" + id + ", fname=" + fname + ", lname=" + lname + ", pass=" + pass + ", phone=" + phone
+				+ ", email=" + email + ", date=" + date + ", gender=" + gender + ", address=" + address + ", type="
+				+ type + "]";
+	}
+	
+	
+	
 }

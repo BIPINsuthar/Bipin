@@ -13,7 +13,7 @@
 </style>
 </head>
 <body>
-   <nav class="navbar navbar-expand-lg navbar-dark bg-dark  mt-auto">
+   <nav class="navbar navbar-expand-lg   mt-auto">
   <a class="navbar-brand" href="#">Navbar</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -36,7 +36,7 @@
       <li class="nav-item">
         <a class="nav-link" href="${contextRoot}/login">about us</a>
       </li>
-      <li><a href="${contextRoot}/login"><button class="btn btn-primary">Login</button></a></li>
+      <li><a href="${contextRoot}/login"><button class="btn btn-outline-primary">Login</button></a></li>
      
     </ul>
   </div>
